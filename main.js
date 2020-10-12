@@ -11,8 +11,9 @@ function main() {
     // -0.5, -0.5,     // Titik B
     -0.5, -0.5,     // Titik B
     // 0.5, -0.5,       // Titik C
-    0.5, -0.5       // Titik C
+    0.5, -0.5,       // Titik C
     // -0.5, 0.5      // Titik A 
+    0.5, 0.5 // Titik  D
   ];
 
   var positionBuffer = gl.createBuffer();
@@ -46,8 +47,8 @@ function main() {
   gl.clearColor(0.0, 0.0, 0.0, 1.0);
   gl.clear(gl.COLOR_BUFFER_BIT);
 
-  var primitive = gl.LINE_LOOP;
+  var primitive = gl.TRIANGLE_STRIP; //klo LINE, countnya 6, vertex coor ditambahin (LINE_LOOP sama kyk LINE tp countnya 3 vertex coor ga ditambahin), klo LINE_STRIP jdnya cmn 2 garis, dia ga looping vertex coor
   var offset = 0;
-  var count = 3;  // Jumlah verteks yang akan digambar
+  var count = 4;  // Jumlah verteks yang akan digambar
   gl.drawArrays(primitive, offset, count);
 }
