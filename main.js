@@ -47,7 +47,7 @@ function main() {
   gl.clearColor(0.0, 0.0, 0.0, 1.0);
   gl.clear(gl.COLOR_BUFFER_BIT);
 
-  var primitive = gl.TRIANGLE_STRIP; //klo LINE, countnya 6, vertex coor ditambahin (LINE_LOOP sama kyk LINE tp countnya 3 vertex coor ga ditambahin), klo LINE_STRIP jdnya cmn 2 garis, dia ga looping vertex coor
+  var primitive = gl.TRIANGLE_FAN; //klo LINE, countnya 6, vertex coor ditambahin (LINE_LOOP sama kyk LINE tp countnya 3 vertex coor ga ditambahin), klo LINE_STRIP jdnya cmn 2 garis, dia ga looping vertex coor
   var offset = 0;
   var count = 4;  // Jumlah verteks yang akan digambar
   gl.drawArrays(primitive, offset, count);
